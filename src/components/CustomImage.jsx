@@ -1,9 +1,9 @@
 import React from "react";
 
-function CustomImage() {
+function CustomImage({ imgSrc, pt }) {
   return (
-    <div className='custom-image'>
-      <img src='/img/gallery/img_10.jpg' alt='aaaa'></img>
+    <div className='custom-image' style={{ PaddingTop: pt }}>
+      <img src={imgSrc} alt='Food' />
     </div>
   );
 }

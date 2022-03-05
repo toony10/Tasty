@@ -1,5 +1,4 @@
 @import "./partials/animations";
-@import "./partials/navbar";
 :root {
   --background-color: #fff;
   --background-light: #fff;
@@ -11,10 +10,6 @@
   --animation-speed: 1;
 }
 
-@function getAnimationDuration($duration: number) {
-  @return calc($duration * var(--animation-speed));
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -24,45 +19,19 @@
 body {
   font-size: var(--font-size);
   font-family: "Roboto", sans-serif;
-}
-// Home Section
-.section {
-  display: flex;
-  text-align: left;
-  .title {
-    color: var(--tex-light);
-    font-size: 3em;
-    letter-spacing: 1px;
-    line-height: 1.3;
-    margin-bottom: 1.25em;
-  }
-  .info {
-    color: var(--text-light);
-    font-size: 1em;
-    margin-bottom: 1.25em;
-    line-height: 1.3;
-    letter-spacing: 1px;
-  }
-  .col {
-    width: 50%;
-  }
-}
-
-.section.hero {
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.75vw;
-  }
+  padding-top: 55px;
 }
 .container {
-  padding-inline: 12vw;
+  padding-inline: 25vw;
 }
 .main {
   padding-block: 3vw;
 }
 a {
   text-decoration: none;
+}
+img {
+  object-fit: cover;
 }
 .btn {
   border: none;
@@ -81,61 +50,52 @@ a {
     box-shadow: 0 1px 3px var(--shadow-color);
   }
 }
+//navbar section
+@import "./partials/navbar";
+
+//sidebar section
+@import "./partials/sidebar";
+
+// Home Section
+.section {
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  .title {
+    color: var(--tex-light);
+    font-size: 2.5em;
+    margin-bottom: 1.25em;
+    font-weight: 900;
+  }
+  .info {
+    color: var(--text-light);
+    font-size: 1em;
+    margin-bottom: 1.25em;
+    line-height: 1.3;
+    letter-spacing: 1px;
+  }
+  .col {
+    width: 50%;
+  }
+}
 .custom-image {
-  // background-color: rebeccapurple;
   height: 0;
   width: 100%;
   padding-top: 100%;
-}
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 260px;
-  background-color: var(--background-color);
-  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.2), 6px 0 5px var(--shadow-color);
-  animation: getAnimationDuration(0.3s) slideInLeft;
-  .sidebar-link {
-    display: block;
-    padding: 0.5em 1em;
-    border-left: 0.4em solid transparent;
-    margin-bottom: 1em;
-    color: var(--text-color);
-    font-size: 1em;
-    text-decoration: none;
-    transition: getAnimationDuration(0.3s);
-    font-size: 1.1em;
-    transform: translateX(-100%);
-    animation: getAnimationDuration(0.3s) slideInLeft forwards;
-
-    @for $i from 1 through 3 {
-      &:nth-child(#{$i}) {
-        animation-delay: #{$i * 0.1}s;
-      }
-    }
-    &.active {
-      border-left-color: var(--primary-color);
-    }
-    &:hover {
-      color: var(--primary-color);
-      border-left-color: var(--primary-color);
-      background-color: rgba(0, 0, 0, 0.05);
-    }
-    svg {
-      width: 1.2em;
-      margin-right: 0.5em;
-    }
+  background-color: #575757;
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
+@import "./partials/hero_section";
+@import "./partials/improve_skills_section";
+@import "./partials/Quote_section";
+@import "./partials/chefs_section";
+@import "./partials/footer_section";
 
-@media screen and (max-width: 768px) {
-  .navbar {
-    .nav-links {
-      display: none;
-    }
-    .sidebar-btn {
-      display: block;
-    }
-  }
-}
+@import "./partials/responsive";

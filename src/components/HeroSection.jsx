@@ -14,17 +14,19 @@ function HeroSection() {
   ];
   return (
     <div className='section hero'>
-      <div className='col'>
+      <div className='col typography'>
         <h1 className='title'>What Are We About</h1>
         <p className='info'>
           Tasty is a place where you can please your soul and tummy with
-          delicious food recepies of all cuisine. And our service is absolutely
+          delicious food recipes of all cuisine. And our service is absolutely
           free. So start exploring now.
         </p>
         <button className='btn'>explore now</button>
       </div>
       <div className='col gallery'>
-        <CustomImage />
+        {images.map((src, index) => (
+          <CustomImage key={index} pt={"85%"} imgSrc={src} />
+        ))}
       </div>
     </div>
   );
