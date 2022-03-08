@@ -50,13 +50,13 @@ img {
     box-shadow: 0 1px 3px var(--shadow-color);
   }
 }
+
 //navbar section
 @import "./partials/navbar";
 
 //sidebar section
 @import "./partials/sidebar";
 
-// Home Section
 .section {
   display: flex;
   text-align: left;
@@ -92,10 +92,17 @@ img {
     height: 100%;
   }
 }
-@import "./partials/hero_section";
-@import "./partials/improve_skills_section";
-@import "./partials/Quote_section";
-@import "./partials/chefs_section";
+// Home page
+@import "./partials/Home/hero_section";
+@import "./partials/Home/improve_skills_section";
+@import "./partials/Home/Quote_section";
+@import "./partials/Home/chefs_section";
+
+// Recipes page
+@import "./partials/Recipes/previous_searches";
+@import "./partials/Recipes/recipes_section";
+
+// Footer
 @import "./partials/footer_section";
 
 @import "./partials/responsive";

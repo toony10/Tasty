@@ -13,8 +13,6 @@ function Footer() {
       <div className='footer-section'>
         <p className='title'>Contact Us</p>
         <p>Tasty@gmail.com</p>
-        <p>+01090</p>
-        <p>Tasty@gmail.com</p>
         <p>01090677513</p>
         <p>2378 Stret NYC</p>
       </div>
