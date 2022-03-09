@@ -16,9 +16,9 @@ function Navbar() {
   return (
     <>
       <div className='navbar container'>
-        <a href='#!' className='logo'>
+        <Link to='/' href='#!' className='logo'>
           T<span>a</span>sty
-        </a>
+        </Link>
         <div className='nav-links'>
           {links.map((link) => (
             <Link

@@ -10,7 +10,7 @@
 .chef-card {
   display: flex;
   height: 120px;
-  background-color: white;
+  background-color: var(--background-color);
   border-radius: 5px;
   overflow: hidden;
   img {
